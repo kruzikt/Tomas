@@ -1,16 +1,17 @@
 package Beginner;
+import java.util.ArrayList;
 
 public class Task6 {
-    static int[] EvenValues(int[] arr) {
-        int[] newArray = new int[arr.length];
+    static ArrayList<Integer> EvenValues(int[] arr) {
+        ArrayList<Integer> myList = new ArrayList<Integer>();
 
         int i=0;
         for(int stuff : arr) {
             if (stuff > 0 && stuff % 2 == 0) {
-                newArray[i++] = stuff;
+                myList.add(stuff);
             }
         }
-        return newArray;
+        return myList;
     }
 
     public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class Task6 {
             array[p] = p;
         }
 
-        int[] a = EvenValues(array);
+        ArrayList<Integer> a = EvenValues(array);
 
         for(int stuff : a) {
             System.out.println(stuff);
